@@ -33,5 +33,11 @@ if __name__ == '__main__':
             my_store.add(data.product, data.amount)
         else:
             print(f"Курьер доставил {data.amount} {data.product} в магазин")
-    print(f"Товары на складе:\n {my_store.get_items()}")
-    print(f"Товары в магазине:\n {my_shop.get_items()}")
+    items_store = my_store.get_items()
+    items_shop = my_shop.get_items()
+    print("Товары на складе:")
+    for k, v in items_store.items():
+        print(k, v)
+    print("Товары в магазине:")
+    for k, v in items_shop.items():
+        print(k, v)
